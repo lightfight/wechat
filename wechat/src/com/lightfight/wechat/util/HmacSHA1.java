@@ -21,10 +21,10 @@ public class HmacSHA1 {
 	}
 
 	private static String byteToHexString(byte ib) {
-		char[] Digit = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
+		char[] hexBaseChars = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
 		char[] ob = new char[2];
-		ob[0] = Digit[(ib >>> 4) & 0X0f];
-		ob[1] = Digit[ib & 0X0F];
+		ob[0] = hexBaseChars[(ib >>> 4) & 0X0f];
+		ob[1] = hexBaseChars[ib & 0X0F];
 		String s = new String(ob);
 		return s;
 	}
